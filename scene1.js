@@ -28,10 +28,16 @@ window.addEventListener('DOMContentLoaded', function() {
 		  cylinder.setAttribute('height', 1.5);
 		  cylinder.setAttribute('color', "#FFC65D");
         scene.appendChild(cylinder);
-		  
-        
 
         // Plane
         // <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+        let plane = document.createElement('a-plane');
+        plane.setAttribute('position', {x: 0, y: 0, z: -4});
+        plane.setAttribute('rotation', {x: -90, y: 0, z: 0});
+        plane.setAttribute('width', 4);
+        plane.setAttribute('height', 4);
+        plane.setAttribute('color', "#7BC8A4");
+        scene.appendChild(plane);
+        
     });
 });
