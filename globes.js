@@ -22,6 +22,9 @@ AFRAME.registerComponent('breakable', {
         el = this.el;
         el.addEventListener('click', function() {
             scene.removeChild(el)
+            var entity = document.querySelector('[sound]');
+            entity.components.sound.playSound();
+            
         });
     }
 });
