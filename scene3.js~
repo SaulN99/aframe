@@ -36,7 +36,8 @@ AFRAME.registerComponent('basic-scene', {
             } else {
                 sphere.setAttribute('color', '#EF2D5E');
             };
-    });
+		});
+            
         // Cylinder
         // <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
         let cylinder = document.createElement('a-cylinder');
@@ -48,11 +49,11 @@ AFRAME.registerComponent('basic-scene', {
         cylinder.addEventListener('click', function() {
             radius = cylinder.getAttribute('radius');
             if (radius == '0.5') {
-                sphere.setAttribute('radius', 2.5);
+                cylinder.setAttribute('radius', 2.5);
             } else {
-                sphere.setAttribute('radius', 0.5);
+                cylinder.setAttribute('radius', 0.5);
             };
-        
+		});
 
         // Plane
         // <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
