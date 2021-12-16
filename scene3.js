@@ -15,28 +15,22 @@ AFRAME.registerComponent('basic-scene', {
         box.setAttribute('position', {x: -1, y: 0.5, z: -3});
         box.setAttribute('rotation', {x: 0, y: 45, z: 0});
         box.setAttribute('color', "#4CC3D9");
-        box.setAttribute('animation', {'startEvents': 'click',
-                                       'property': 'position',
-                                       'from': {x: -1, y: 1.5, z: -3},
-                                       'to': {x: -1, y: 0.5, z: -3},
-                                       'dur': 1000});
-        this.el.appendChild(box); 
-
-        // Sphere
-        // <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-        let sphere = document.createElement('a-sphere');
-        sphere.setAttribute('position', {x:0, y: 1.25, z: -5});
-        sphere.setAttribute('radius', 1.25);
-        sphere.setAttribute('color', "#EF2D5E");
-        this.el.appendChild(sphere);
-        sphere.addEventListener('click', function() {
-            color = sphere.getAttribute('color');
-            if (color == '#EF2D5E') {
-                sphere.setAttribute('color', 'red');
-            } else {
-                sphere.setAttribute('color', '#EF2D5E');
-            };
+        box.addEventListener('click', function() {
+            // Sphere
+        		// <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+        		let sphere = document.createElement('a-sphere');
+        		sphere.setAttribute('position', {x:0, y: 1.25, z: -5});
+        		sphere.setAttribute('radius', 1.25);
+        		sphere.setAttribute('color', "#EF2D5E");
+        		sphere.setAttribute('animation', {'startEvents': 'click',
+            		                           'property': 'position',
+                  		                     'from': {x: -1, y: 1.5, z: -3},
+                        		               'to': {x: -1, y: 0.5, z: -3},
+                              		         'dur': 1000});
+        		this.el.appendChild(sphere); 
 		});
+
+
             
         // Cylinder
         // <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
